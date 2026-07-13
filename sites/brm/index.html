@@ -88,6 +88,11 @@
     /* HERO */
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+      background-image:
+        linear-gradient(rgba(26,35,50,.94), rgba(44,62,80,.9)),
+        linear-gradient(rgba(86,182,200,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(86,182,200,.08) 1px, transparent 1px);
+      background-size: auto, 32px 32px, 32px 32px;
       color: var(--white);
       padding: 6rem 2rem;
       text-align: center;
@@ -216,6 +221,49 @@
       color: var(--gold);
       font-weight: 700;
     }
+
+    .hero-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .hero-secondary {
+      display: inline-block;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .trust-strip { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; margin-top: 2.25rem; }
+    .trust-strip span { padding: .25rem 1rem; border-right: 1px solid rgba(255,255,255,.25); font-size: .85rem; }
+    .trust-strip span:last-child { border-right: 0; }
+
+    .intent-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .intent-card { display: block; padding: 1.5rem; background: var(--white); border-top: 4px solid var(--gold); color: var(--navy); text-decoration: none; box-shadow: 0 8px 24px rgba(16,29,42,.08); }
+    .intent-card strong { display: block; margin-bottom: .45rem; }
+    .intent-card span { color: var(--text-light); font-size: .9rem; }
+    .intent-card.nest { background: var(--navy); color: var(--white); border-top-color: #56b6c8; }
+    .intent-card.nest span { color: rgba(255,255,255,.72); }
+
+    .audience-grid, .deliverable-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .audience-item, .deliverable-item { padding: 1.5rem; background: var(--white); border: 1px solid #e0e0e0; }
+    .audience-item h3, .deliverable-item h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: .5rem; }
+    .audience-item p, .deliverable-item p { color: var(--text-light); font-size: .92rem; }
+
+    .process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; counter-reset: steps; }
+    .process-step { padding: 1.5rem 1rem; border-left: 2px solid var(--gold); }
+    .process-step strong { color: var(--gold); display: block; margin-bottom: .5rem; }
+
+    .independence { background: var(--navy); color: var(--white); text-align: center; }
+    .independence h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .independence p { max-width: 780px; margin: 0 auto; opacity: .82; }
+
+    .report-preview { background: #eaf1f3; border: 1px solid #c8d6dc; padding: 2rem; position: relative; }
+    .report-preview::before { content: "SAMPLE FORMAT"; position: absolute; top: 1rem; right: 1rem; color: var(--gold); font-size: .7rem; font-weight: 800; letter-spacing: 1px; }
+    .report-line { height: 8px; background: #c6d4da; margin: .8rem 0; }
+    .report-line.short { width: 55%; }
+
+    details { background: var(--white); border-bottom: 1px solid #ddd; padding: 1rem 0; }
+    summary { cursor: pointer; font-weight: 700; color: var(--navy); }
+    details p { color: var(--text-light); padding-top: .75rem; }
 
     .handoff { background: var(--navy); color: var(--white); }
     .handoff .section-title, .handoff .section-desc { color: var(--white); }
@@ -397,7 +445,14 @@
       .about-stats { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .handoff-grid { grid-template-columns: 1fr; }
+      .intent-grid, .audience-grid, .deliverable-grid { grid-template-columns: 1fr 1fr; }
+      .process { grid-template-columns: 1fr; }
       .section-title { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .intent-grid, .audience-grid, .deliverable-grid { grid-template-columns: 1fr; }
+      .trust-strip { flex-direction: column; }
+      .trust-strip span { border-right: 0; }
     }
   </style>
 </head>
@@ -409,20 +464,48 @@
     <button class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
     <ul class="nav-links">
       <li><a href="#inspections">Inspections</a></li>
+      <li><a href="#who">Who We Help</a></li>
+      <li><a href="#report">Sample Report</a></li>
       <li><a href="#consulting">Consulting</a></li>
       <li><a href="https://nestshield.net" target="_blank" rel="noopener">NestShield</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="nav-cta">Book an Inspection</a></li>
+      <li><a href="#contact" class="nav-cta">Request Inspection Availability</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h1>We Find the <span>Risk</span><br>in Your Building</h1>
-      <p>Commercial building inspections and construction consulting. Know what you're dealing with before it costs you.</p>
-      <a href="#contact" class="hero-cta">Book an Inspection</a>
-      <div class="hero-credentials">CCPIA Certified &nbsp;|&nbsp; 28 Years in Commercial Construction</div>
+      <div class="section-label">Independent Commercial Building Inspections</div>
+      <h1>Know the Condition.<br><span>Understand the Risk.</span><br>Make the Right Building Decision.</h1>
+      <p>Brown Risk Group helps commercial property buyers, owners, investors, and managers understand building condition before purchase, repair, and maintenance decisions.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="hero-cta">Request Inspection Availability</a>
+        <a href="#consulting" class="hero-secondary">Discuss a Building Concern</a>
+      </div>
+      <div class="trust-strip"><span>CCPIA Certified</span><span>28 Years of Construction Experience</span><span>Independent Reporting</span><span>Commercial Only</span></div>
+    </div>
+  </section>
+
+  <section class="section-alt" style="padding-top:2rem;padding-bottom:2rem;">
+    <div class="container intent-grid">
+      <a class="intent-card" href="#inspections"><strong>I am buying a building</strong><span>Understand condition before closing.</span></a>
+      <a class="intent-card" href="#inspections"><strong>I own or manage a building</strong><span>Document conditions and plan maintenance.</span></a>
+      <a class="intent-card" href="#consulting"><strong>I am planning repairs</strong><span>Clarify priorities, scope, and next steps.</span></a>
+      <a class="intent-card nest" href="#nestshield"><strong>We keep having water losses</strong><span>Explore continuous leak and freeze protection.</span></a>
+    </div>
+  </section>
+
+  <section id="who" class="section-light">
+    <div class="container">
+      <div class="section-label">Who We Help</div>
+      <h2 class="section-title">Commercial property decisions need clear building information.</h2>
+      <div class="audience-grid">
+        <div class="audience-item"><h3>Buyers</h3><p>Understand visible conditions and material concerns before closing.</p></div>
+        <div class="audience-item"><h3>Owners</h3><p>Establish a documented condition baseline for the property.</p></div>
+        <div class="audience-item"><h3>Investors</h3><p>Identify building issues that may affect the investment decision.</p></div>
+        <div class="audience-item"><h3>Property Managers</h3><p>Document recurring concerns and support maintenance planning.</p></div>
+      </div>
     </div>
   </section>
 
@@ -431,7 +514,7 @@
     <div class="container">
       <div class="section-label">Service 01</div>
       <h2 class="section-title">Commercial Building Inspections</h2>
-      <p class="section-desc">We walk your building, document what we find, and deliver an objective report. No opinions. No sales pitch. Just findings.</p>
+      <p class="section-desc">We visually assess safely accessible areas, document observed conditions, and deliver an independent commercial inspection report. The agreed scope defines the systems and areas included.</p>
       <div class="services-grid">
         <div class="service-card">
           <h3>What We Inspect</h3>
@@ -449,8 +532,9 @@
           <ul>
             <li>Written report with photos</li>
             <li>Findings rated by severity</li>
-            <li>Cost ranges for each finding</li>
-            <li>Risk exposure flags</li>
+            <li>Material condition and risk flags</li>
+            <li>Inaccessible areas and scope limitations</li>
+            <li>Specialist follow-up where appropriate</li>
             <li>Executive summary</li>
           </ul>
         </div>
@@ -488,6 +572,45 @@
     </div>
   </section>
 
+  <section id="report" class="section-light">
+    <div class="container">
+      <div class="section-label">What You Receive</div>
+      <h2 class="section-title">A report built for decisions.</h2>
+      <p class="section-desc">The inspection report organizes observed conditions by building system and supports a clear review of material findings and limitations.</p>
+      <div class="services-grid">
+        <div class="deliverable-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="deliverable-item"><h3>Executive Summary</h3><p>A concise overview of material observations.</p></div>
+          <div class="deliverable-item"><h3>Photo Documentation</h3><p>Images tied to locations and observed conditions.</p></div>
+          <div class="deliverable-item"><h3>System Findings</h3><p>Organized coverage of systems included in the scope.</p></div>
+          <div class="deliverable-item"><h3>Clear Limitations</h3><p>Documentation of inaccessible areas and scope boundaries.</p></div>
+        </div>
+        <div class="report-preview" aria-label="Sample report format placeholder">
+          <div class="section-label">Brown Risk Group</div><h3>Commercial Inspection Report</h3>
+          <div class="report-line"></div><div class="report-line short"></div><div class="report-line"></div><div class="report-line"></div><div class="report-line short"></div>
+          <p style="margin-top:1.5rem;color:var(--text-light);">A real anonymized sample report will replace this format preview after the report template is approved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Clear scope before anyone steps on site.</h2>
+      <div class="process">
+        <div class="process-step"><strong>01</strong><h3>Property Details</h3><p>Tell us about the building and the decision you are making.</p></div>
+        <div class="process-step"><strong>02</strong><h3>Scope and Fee</h3><p>We confirm the inspection scope, limitations, and fee.</p></div>
+        <div class="process-step"><strong>03</strong><h3>Site Inspection</h3><p>We inspect the agreed safely accessible areas and systems.</p></div>
+        <div class="process-step"><strong>04</strong><h3>Written Report</h3><p>You receive organized observations and photographs.</p></div>
+        <div class="process-step"><strong>05</strong><h3>Separate Advice</h3><p>Consulting is available only when requested under a separate scope.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="independence">
+    <div class="container"><h2>Independent findings. No repair sales attached.</h2><p>Inspection findings are based on observed conditions and the agreed scope. They are not contingent on repair work, contractor referrals, product installation, or additional services.</p></div>
+  </section>
+
   <!-- NESTSHIELD HANDOFF -->
   <section id="nestshield" class="handoff">
     <div class="container handoff-grid">
@@ -511,7 +634,7 @@
       <h2 class="section-title">Stephen Brown</h2>
       <div class="about-content">
         <div>
-          <p class="section-desc" style="margin-bottom: 1.5rem;">28 years in the construction industry. Started as a builder, became a plumber, worked industrial and residential projects across the spectrum. Now I walk buildings and tell owners what they're really dealing with.</p>
+          <p class="section-desc" style="margin-bottom: 1.5rem;">Stephen brings 28 years of construction experience to commercial building inspections and building-risk conversations. That field background supports practical observation without implying an active trade license.</p>
           <p class="section-desc">CCPIA certified for commercial property inspections. Brown Risk Group exists because building owners deserve straight answers, not sales pitches from people who want to sell them the fix.</p>
         </div>
         <div class="about-stats">
@@ -524,15 +647,27 @@
             <div class="stat-label">Certified Inspector</div>
           </div>
           <div class="stat">
-            <div class="stat-number">2</div>
-            <div class="stat-label">Licensed Trades</div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Commercial Focus</div>
           </div>
           <div class="stat">
-            <div class="stat-number">I+R</div>
-            <div class="stat-label">Industrial & Residential</div>
+            <div class="stat-number">BRG</div>
+            <div class="stat-label">Independent Reporting</div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="faq">
+    <div class="container">
+      <div class="section-label">Frequently Asked Questions</div>
+      <h2 class="section-title">Before you request an inspection.</h2>
+      <details><summary>Who should request a commercial inspection?</summary><p>Commercial property buyers, owners, investors, and property managers who need documented information about visible building conditions.</p></details>
+      <details><summary>Does Brown Risk Group inspect houses?</summary><p>No. Brown Risk Group is commercial-only.</p></details>
+      <details><summary>Is this an engineering or code-compliance inspection?</summary><p>No. It is a visual commercial condition inspection of agreed safely accessible areas. Engineering, code enforcement, environmental testing, destructive testing, and licensed trade evaluations are outside the standard scope.</p></details>
+      <details><summary>What is the difference between inspection and consulting?</summary><p>The inspection documents observed conditions under the agreed scope. Consulting is a separate engagement for clients who want help organizing priorities, scopes, or next steps.</p></details>
+      <details><summary>Does BRG sell repairs?</summary><p>No. Inspection findings are not contingent on repair work or contractor sales.</p></details>
     </div>
   </section>
 
@@ -541,23 +676,28 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h2>Let's Talk About <span>Your Building</span></h2>
-        <p>Book an inspection or ask about consulting. We'll get back to you within 24 hours.</p>
+        <p>Tell us about the commercial property and the decision you are making. We will review the details before confirming scope, availability, and fee.</p>
         <div class="contact-detail">
           <span class="icon">@</span>
           <span>Contact details coming soon</span>
         </div>
         <div class="contact-detail">
           <span class="icon">&#9742;</span>
-          <span>Commercial inspection inquiries</span>
+          <span>Commercial properties only</span>
         </div>
       </div>
       <form class="contact-form" name="brg-inspection-inquiry" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="brg-inspection-inquiry">
         <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="company" placeholder="Company">
         <input type="email" name="email" placeholder="Email" required>
         <input type="tel" name="phone" placeholder="Phone">
+        <input type="text" name="property-address" placeholder="Property address">
+        <input type="text" name="property-type" placeholder="Property type">
+        <input type="text" name="square-footage" placeholder="Approximate square footage">
+        <input type="text" name="timing" placeholder="Desired inspection timing">
         <textarea name="project" placeholder="Tell us about your building or project"></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">Request Inspection Availability</button>
       </form>
     </div>
   </section>

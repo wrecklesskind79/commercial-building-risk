@@ -25,4 +25,4 @@ Separate from BRG inspections. A paid scoping visit specifically for NestShield 
 
 ## Founder
 
-Stephen Brown has 28 years in the trades with builder, plumbing, industrial, and residential experience. CCPIA certified.
+Stephen Brown has 28 years of construction experience and is CCPIA Certified. Brown Risk Group is commercial-only. No active trade license is currently advertised.

@@ -14,7 +14,7 @@ Give opinions. Tell owners:
 
 ## Why They Pay
 
-28 years as a builder and plumber. Industrial and residential. You've seen every way a building fails and every way contractors cut corners.
+28 years of construction experience applied to commercial building concerns. Do not advertise an active trade license.
 
 ## Who Buys
 

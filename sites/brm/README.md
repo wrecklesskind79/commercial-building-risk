@@ -2,7 +2,7 @@
 
 **Commercial building risk management. Inspections and consulting.**
 
-Stephen Brown has 28 years in the trades with builder, plumbing, industrial, and residential experience. CCPIA certified.
+Stephen Brown has 28 years of construction experience and is CCPIA Certified. Brown Risk Group is commercial-only. Stephen does not currently advertise an active trade license.
 
 ## Two Services, One Company
 
