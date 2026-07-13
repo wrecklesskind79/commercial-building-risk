@@ -110,20 +110,41 @@
 
     .hero-visual {
       position: relative;
-      filter: drop-shadow(0 28px 45px rgba(0,0,0,.28));
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0 32px 70px rgba(0,0,0,.34);
     }
 
-    .hero-visual img { display: block; width: 100%; height: auto; }
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      object-position: 46% center;
+      filter: saturate(.72) contrast(1.06);
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(16,27,40,.05), rgba(16,27,40,.52));
+      pointer-events: none;
+    }
 
     .hero-visual::after {
-      content: "WHOLE-BUILDING PERSPECTIVE";
+      content: "";
       position: absolute;
-      right: 1.5rem;
-      bottom: 1rem;
-      color: rgba(255,255,255,.68);
-      font-size: .68rem;
-      font-weight: 800;
-      letter-spacing: 1.6px;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      width: 38%;
+      height: 5px;
+      background: var(--gold);
     }
 
     .hero h1 {
@@ -494,7 +515,7 @@
       .mobile-menu { display: block; }
       .hero { padding: 4rem 1.5rem; }
       .hero .container { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-visual { max-width: 560px; margin: 0 auto; }
+      .hero-visual { width: 100%; max-width: 680px; min-height: 390px; margin: 0 auto; }
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1rem; }
       .services-grid { grid-template-columns: 1fr; }
@@ -513,6 +534,7 @@
       .trust-strip span { border-right: 0; }
     }
   </style>
+  <link rel="stylesheet" href="brg-premium.css?v=20260713-2">
 </head>
 <body>
 
@@ -544,7 +566,9 @@
         </div>
         <div class="trust-strip"><span>CCPIA Certified</span><span>28 Years of Construction Experience</span><span>Independent Reporting</span><span>Commercial Building Focus</span></div>
       </div>
-      <div class="hero-visual" aria-hidden="true"><img src="brg-commercial-building.svg" alt=""></div>
+      <figure class="hero-visual">
+        <img src="brg-commercial-hero.jpg" alt="Low-angle view of a modern commercial building facade" width="1800" height="1200">
+      </figure>
     </div>
   </section>
 
@@ -578,6 +602,7 @@
       <p class="section-desc">We visually assess safely accessible areas, document observed conditions, and deliver an independent commercial inspection report. The agreed scope defines the systems and areas included.</p>
       <div class="services-grid">
         <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39V16l16-8 16 8v23M14 20h20M14 27h20M18 34h12"/><path class="accent" d="M24 8v31"/></svg></div>
           <h3>What We Inspect</h3>
           <ul>
             <li>Roof systems</li>
@@ -589,6 +614,7 @@
           </ul>
         </div>
         <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 12h30v27H9zM15 19h18M15 26h18M15 33h10"/><path class="accent" d="m29 32 3 3 7-8"/></svg></div>
           <h3>What You Get</h3>
           <ul>
             <li>Written report with photos</li>
@@ -611,6 +637,7 @@
       <p class="section-desc">Got the report. Now what? Hire us to tell you what to fix first, how to fix it right, and who to call. This is where 28 years of construction experience goes to work for you.</p>
       <div class="services-grid">
         <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39h32M12 35V24h7v11M21 35V16h7v19M30 35V9h7v26"/><path class="accent" d="m10 18 9-7 8 3 11-8"/></svg></div>
           <h3>What We Advise On</h3>
           <ul>
             <li>Clear priorities for what needs attention now and later</li>
@@ -621,6 +648,7 @@
           </ul>
         </div>
         <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6 39 12v10c0 10-6 17-15 21C15 39 9 32 9 22V12z"/><path class="accent" d="m17 24 5 5 10-12"/></svg></div>
           <h3>Who This Is For</h3>
           <ul>
             <li>Owners who got an inspection report and don't know where to start</li>
@@ -646,6 +674,7 @@
           <div class="deliverable-item"><h3>Clear Limitations</h3><p>Documentation of inaccessible areas and scope boundaries.</p></div>
         </div>
         <div class="report-preview" aria-label="Sample report format placeholder">
+          <div class="report-stack" aria-hidden="true"></div>
           <div class="section-label">Brown Risk Group</div><h3>Commercial Inspection Report</h3>
           <div class="report-line"></div><div class="report-line short"></div><div class="report-line"></div><div class="report-line"></div><div class="report-line short"></div>
           <p style="margin-top:1.5rem;color:var(--text-light);">A real anonymized sample report will replace this format preview after the report template is approved.</p>
@@ -659,17 +688,17 @@
       <div class="section-label">How It Works</div>
       <h2 class="section-title">Clear scope before anyone steps on site.</h2>
       <div class="process">
-        <div class="process-step"><strong>01</strong><h3>Property Details</h3><p>Tell us about the building and the decision you are making.</p></div>
-        <div class="process-step"><strong>02</strong><h3>Scope and Fee</h3><p>We confirm the inspection scope, limitations, and fee.</p></div>
-        <div class="process-step"><strong>03</strong><h3>Site Inspection</h3><p>We inspect the agreed safely accessible areas and systems.</p></div>
-        <div class="process-step"><strong>04</strong><h3>Written Report</h3><p>You receive organized observations and photographs.</p></div>
-        <div class="process-step"><strong>05</strong><h3>Separate Advice</h3><p>Consulting is available only when requested under a separate scope.</p></div>
+        <div class="process-step"><strong>01</strong><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M8 10h8M8 14h8M8 18h5"/></svg></div><h3>Property Details</h3><p>Tell us about the building and the decision you are making.</p></div>
+        <div class="process-step"><strong>02</strong><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5zM8 8h8M8 12h8M8 16h5"/></svg></div><h3>Scope and Fee</h3><p>We confirm the inspection scope, limitations, and fee.</p></div>
+        <div class="process-step"><strong>03</strong><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 5 5M10 7v6M7 10h6"/></svg></div><h3>Site Inspection</h3><p>We inspect the agreed safely accessible areas and systems.</p></div>
+        <div class="process-step"><strong>04</strong><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM9 10h6M9 14h6M9 18h4"/></svg></div><h3>Written Report</h3><p>You receive organized observations and photographs.</p></div>
+        <div class="process-step"><strong>05</strong><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 16l4-5 3 2 5-7M16 6h2v2"/></svg></div><h3>Separate Advice</h3><p>Consulting is available only when requested under a separate scope.</p></div>
       </div>
     </div>
   </section>
 
   <section class="independence">
-    <div class="container"><h2>Independent findings. No repair sales attached.</h2><p>Inspection findings are based on observed conditions and the agreed scope. They are not contingent on repair work, contractor referrals, product installation, or additional services.</p></div>
+    <div class="container independence-inner"><div class="independence-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 5 53 13v15c0 15-8 25-21 31C19 53 11 43 11 28V13z"/><path class="accent" d="m22 31 7 7 14-17"/></svg></div><div><h2>Independent findings. No repair sales attached.</h2><p>Inspection findings are based on observed conditions and the agreed scope. They are not contingent on repair work, contractor referrals, product installation, or additional services.</p></div></div>
   </section>
 
   <!-- NESTSHIELD HANDOFF -->
