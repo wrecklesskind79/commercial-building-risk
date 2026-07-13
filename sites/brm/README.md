@@ -1,8 +1,8 @@
-# Brown Risk Management
+# Brown Risk Group
 
 **Commercial building risk management. Inspections and consulting.**
 
-Stephen Brown — 28 years in the trades. Builder, plumber. Industrial and residential. CCPIA certified.
+Stephen Brown has 28 years in the trades with builder, plumbing, industrial, and residential experience. CCPIA certified.
 
 ## Two Services, One Company
 
@@ -20,6 +20,6 @@ The inspection report deliberately withholds expertise. If they want the 28 year
 
 Both services surface water and freeze risk. When the findings point to ongoing exposure that repairs alone won't solve, the handoff is natural:
 
-"We can fix the known problems. But the pipe that fails at 2 AM — that needs continuous monitoring. That's NestShield."
+"We can address the known problems. The failures nobody sees coming need continuous monitoring. That is where NestShield may be the right next step."
 
-BRM finds and advises on risk. NestShield eliminates it.
+BRG finds and advises on risk. NestShield provides continuous water and freeze risk protection.

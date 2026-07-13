@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brown Risk Group — Commercial Building Risk Assessment</title>
+  <title>Brown Risk Group | Commercial Building Risk</title>
   <meta name="description" content="Commercial building inspections and construction consulting. 28 years in the trades. CCPIA certified.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -206,12 +206,42 @@
     }
 
     .service-card li::before {
-      content: "—";
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      top: 0.85rem;
       position: absolute;
       left: 0;
       color: var(--gold);
       font-weight: 700;
     }
+
+    .handoff { background: var(--navy); color: var(--white); }
+    .handoff .section-title, .handoff .section-desc { color: var(--white); }
+    .handoff .section-desc { opacity: 0.82; }
+    .handoff-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .handoff-link {
+      display: inline-block;
+      color: var(--navy);
+      background: var(--gold);
+      padding: 0.9rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .handoff-note {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 2rem;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+    }
+    .handoff-note strong { color: var(--gold); }
 
     /* ABOUT */
     .about-content {
@@ -366,6 +396,7 @@
       .about-content { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
+      .handoff-grid { grid-template-columns: 1fr; }
       .section-title { font-size: 1.5rem; }
     }
   </style>
@@ -379,6 +410,7 @@
     <ul class="nav-links">
       <li><a href="#inspections">Inspections</a></li>
       <li><a href="#consulting">Consulting</a></li>
+      <li><a href="https://nestshield.net" target="_blank" rel="noopener">NestShield</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Book an Inspection</a></li>
     </ul>
@@ -390,7 +422,7 @@
       <h1>We Find the <span>Risk</span><br>in Your Building</h1>
       <p>Commercial building inspections and construction consulting. Know what you're dealing with before it costs you.</p>
       <a href="#contact" class="hero-cta">Book an Inspection</a>
-      <div class="hero-credentials">CCPIA Certified &nbsp;·&nbsp; 28 Years in Commercial Construction</div>
+      <div class="hero-credentials">CCPIA Certified &nbsp;|&nbsp; 28 Years in Commercial Construction</div>
     </div>
   </section>
 
@@ -405,11 +437,11 @@
           <h3>What We Inspect</h3>
           <ul>
             <li>Roof systems</li>
-            <li>Building envelope — walls, windows, waterproofing</li>
+            <li>Building envelope, walls, windows, and waterproofing</li>
             <li>Mechanical, electrical, plumbing</li>
             <li>Structural systems</li>
             <li>Interiors</li>
-            <li>Site — drainage, parking, paving</li>
+            <li>Site drainage, parking, and paving</li>
           </ul>
         </div>
         <div class="service-card">
@@ -431,12 +463,12 @@
     <div class="container">
       <div class="section-label">Service 02</div>
       <h2 class="section-title">Construction Consulting</h2>
-      <p class="section-desc">Got the report. Now what? Hire us to tell you what to fix first, how to fix it right, and who to call. 28 years of trade experience — builder and plumber.</p>
+      <p class="section-desc">Got the report. Now what? Hire us to tell you what to fix first, how to fix it right, and who to call. This is where 28 years of construction experience goes to work for you.</p>
       <div class="services-grid">
         <div class="service-card">
           <h3>What We Advise On</h3>
           <ul>
-            <li>Priority ranking — fix this now, watch this, ignore this</li>
+            <li>Clear priorities for what needs attention now and later</li>
             <li>Repair approach and methodology</li>
             <li>Contractor selection guidance</li>
             <li>Timeline and sequencing</li>
@@ -456,6 +488,22 @@
     </div>
   </section>
 
+  <!-- NESTSHIELD HANDOFF -->
+  <section id="nestshield" class="handoff">
+    <div class="container handoff-grid">
+      <div>
+        <div class="section-label">Service 03</div>
+        <h2 class="section-title">Continuous Water Risk Protection</h2>
+        <p class="section-desc">When a building needs more than a one-time assessment, NestShield provides water leak monitoring, freeze monitoring, and automatic shutoff protection.</p>
+        <a class="handoff-link" href="https://nestshield.net" target="_blank" rel="noopener">Visit NestShield</a>
+      </div>
+      <div class="handoff-note">
+        <strong>A separate company. A natural next step.</strong>
+        <p style="margin-top: 0.75rem; opacity: 0.82;">Brown Risk Group finds and advises on building risk. NestShield provides ongoing protection when continuous monitoring is the right answer.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" class="section-alt">
     <div class="container">
@@ -464,7 +512,7 @@
       <div class="about-content">
         <div>
           <p class="section-desc" style="margin-bottom: 1.5rem;">28 years in the construction industry. Started as a builder, became a plumber, worked industrial and residential projects across the spectrum. Now I walk buildings and tell owners what they're really dealing with.</p>
-          <p class="section-desc">CCPIA certified for commercial property inspections. Brown Risk Group exists because building owners deserve straight answers — not sales pitches from people who want to sell them the fix.</p>
+          <p class="section-desc">CCPIA certified for commercial property inspections. Brown Risk Group exists because building owners deserve straight answers, not sales pitches from people who want to sell them the fix.</p>
         </div>
         <div class="about-stats">
           <div class="stat">
@@ -496,22 +544,19 @@
         <p>Book an inspection or ask about consulting. We'll get back to you within 24 hours.</p>
         <div class="contact-detail">
           <span class="icon">@</span>
-          <span>info@brownriskgroup.com</span>
+          <span>Contact details coming soon</span>
         </div>
         <div class="contact-detail">
           <span class="icon">&#9742;</span>
-          <span>(XXX) XXX-XXXX</span>
-        </div>
-        <div class="contact-detail">
-          <span class="icon">&#9873;</span>
-          <span>Atlanta, GA Metro Area</span>
+          <span>Commercial inspection inquiries</span>
         </div>
       </div>
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted — connect this to your email or CRM');">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Phone">
-        <textarea placeholder="Tell us about your building or project"></textarea>
+      <form class="contact-form" name="brg-inspection-inquiry" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="brg-inspection-inquiry">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="project" placeholder="Tell us about your building or project"></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -520,7 +565,7 @@
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Brown Risk Group. All rights reserved.</p>
-    <p style="margin-top: 0.5rem;">For ongoing building protection: <a href="https://nestshield.net" target="_blank">NestShield — IoT Water Risk Management</a></p>
+    <p style="margin-top: 0.5rem;">For ongoing building protection: <a href="https://nestshield.net" target="_blank" rel="noopener">NestShield | IoT Water Risk Management</a></p>
   </footer>
 
 </body>

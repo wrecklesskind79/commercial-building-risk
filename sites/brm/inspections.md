@@ -32,12 +32,12 @@ No opinions. No recommendations on who to hire or what to fix first. Just findin
 Written report with photos:
 - Executive summary
 - Findings by system (severity-rated)
-- Cost ranges (not detailed estimates — that's estimating)
+- Cost ranges, not detailed estimates
 - Risk exposure flags
 
 ## Handoff to Consulting
 
-"We found X, Y, Z. The report tells you what's there. If you want my opinion on what to prioritize, how to fix it, and who to call — that's a separate engagement."
+"We found X, Y, and Z. The report documents what is there. If you want advice on priorities, repair approaches, and next steps, that is a separate consulting engagement."
 
 The report deliberately withholds expertise. That's the hook.
 

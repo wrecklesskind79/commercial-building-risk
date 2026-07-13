@@ -1,18 +1,19 @@
-# BRG Landing Page — Codex Handoff
+# BRG Landing Page | Codex Handoff
 
 ## What's Built
 
-`index.html` — single-page landing site for Brown Risk Group. Fully self-contained, no dependencies.
+`index.html` is the single-page landing site for Brown Risk Group. It is fully self-contained with no dependencies.
 
 ## Sections
 
-1. **Nav** — sticky, mobile-responsive hamburger menu. Links: Inspections, Consulting, About, Book an Inspection (CTA)
-2. **Hero** — "We Find the Risk in Your Building." CTA → contact form
-3. **Inspections** — what we inspect + what you get (two-card grid)
-4. **Consulting** — what we advise on + who it's for (two-card grid)
-5. **About** — Stephen Brown bio + stats (28 years, CCPIA, 2 trades, I+R)
-6. **Contact** — form + contact details. Form currently alerts on submit — needs backend
-7. **Footer** — links to nestshield.net
+1. **Nav**: sticky, mobile-responsive menu. Links: Inspections, Consulting, NestShield, About, and Book an Inspection
+2. **Hero**: "We Find the Risk in Your Building." CTA links to the inspection form
+3. **Inspections**: what we inspect and what the client receives
+4. **Consulting**: what we advise on and who it serves
+5. **NestShield handoff**: separate continuous water and freeze risk protection brand
+6. **About**: Stephen Brown bio and credentials
+7. **Contact**: Netlify-ready inspection inquiry form; final contact details are still required
+8. **Footer**: links to nestshield.net
 
 ## What Needs Work
 
@@ -28,11 +29,11 @@
 ## Design
 
 - Navy + gold palette. Professional, not flashy.
-- Modeled after Bubble Rock Advisors (bubblerockadvisors.com) — same structure: services on one page, one CTA
+- Modeled after the Bubble Rock Advisors structure: services on one page with one primary CTA
 - Mobile responsive with hamburger nav
 
 ## Brand Rules
 
 - BRG = inspections + consulting. One company, two services.
-- Inspection report is OBJECTIVE — no opinions. Consulting is the upsell.
+- The inspection report is objective and contains no consulting opinions. Consulting is a separate engagement.
 - Footer links to NestShield for ongoing protection. Don't hard-sell it on this page.

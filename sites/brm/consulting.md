@@ -34,7 +34,7 @@ Consulting report or advisory session:
 
 ## Handoff to NestShield
 
-"We can fix the maintenance gaps. But the unknown failures — the pipe at 2 AM, the freeze nobody catches — need continuous monitoring. That's NestShield."
+"We can address the maintenance gaps. The failures nobody sees coming need continuous monitoring. That is where NestShield may be the right next step."
 
 ## Pricing
 

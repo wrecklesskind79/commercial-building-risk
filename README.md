@@ -1,28 +1,28 @@
-# NestShield Business — 2 Brands, 1 Funnel
+# Brown Risk Group and NestShield | 2 Brands, 1 Funnel
 
 ## The Funnel
 
-1. **Brown Risk Management (BRM)** — Inspections + consulting. Finds and advises on risk.
-2. **NestShield** (nestshield.net) — IoT water risk management. Eliminates risk. Recurring revenue.
+1. **Brown Risk Group (BRG)**: Inspections and consulting. Finds and advises on risk.
+2. **NestShield** (nestshield.net): IoT water risk management. Helps reduce risk through continuous protection. Recurring revenue.
 
-BRM → NestShield. Inspections find the risk. Consulting advises on it. NestShield eliminates it.
+BRG leads with inspections. Consulting helps clients act on the findings. NestShield is the separate handoff for continuous water and freeze risk protection.
 
 ## Standalone
 
-3. **Estimating** — Freelance preconstruction. Overflow from contractors. Funds the operation. Also a networking engine — puts you in front of people who might need BRM or NestShield.
+3. **Estimating**: Standalone freelance preconstruction work. It funds the operation and creates relationships with people who may later need BRG or NestShield.
 
 ## NestShield Audit
 
-Separate from BRM inspections. A paid scoping visit specifically for NestShield IoT products. Lives on nestshield.net ("Book an Audit"), not on the BRM site.
+Separate from BRG inspections. A paid scoping visit specifically for NestShield IoT products. It lives on nestshield.net as "Book an Audit," not on the BRG site.
 
 ## Rules
 
 - Every service is profitable standalone
-- Inspection report is objective — no opinions (consulting upsell)
-- Never pitch — findings sell the next step
+- Inspection reports are objective and do not include consulting opinions
+- Never force a pitch; findings reveal whether another service is appropriate
 - NestShield is the endgame product
 - Risk management is the identity, IoT is the solution
 
 ## Founder
 
-Stephen Brown — 28 years in trades. Builder, plumber. Industrial + residential. CCPIA certified.
+Stephen Brown has 28 years in the trades with builder, plumbing, industrial, and residential experience. CCPIA certified.
